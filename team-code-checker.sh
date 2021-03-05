@@ -61,7 +61,7 @@ fi
 
 # "$(dirname "$0")"/check-phpcs.sh
 # CROSS_CHECK_RESULT=0
-PROJECT=`php -r "echo dirname(dirname(dirname(realpath('$0'))));"`
+PROJECT=`php -r "echo dirname(dirname(dirname(dirname(realpath('$0')))));"`
 while read FILE; do
     # check that file not removed(also can be implemented using --diff-filter)
     if [[ -f $FILE ]]; then
@@ -108,7 +108,7 @@ fi
 
 # "$(dirname "$0")"/check-eslint.sh
 # CROSS_CHECK_RESULT=0
-# PROJECT=`php -r "echo dirname(dirname(dirname(realpath('$0'))));"`
+# PROJECT=`php -r "echo dirname(dirname(dirname(dirname(realpath('$0')))));"`
 LINT_CONFIG="$PROJECT/.git/hooks/team-code-checker/eslintrc.json"
 LINT_IGNORE="$PROJECT/.git/hooks/team-code-checker/.eslintignore"
 while read FILE; do
@@ -126,10 +126,13 @@ if [[ "$FILES" != "" ]]; then
     echo ""
     echo ""
     echo "=== Running ESLint. ==="
-    eslint -c $LINT_CONFIG --ignore-path $LINT_IGNORE $FILES
+    npx eslint -c $LINT_CONFIG --ignore-path $LINT_IGNORE $FILES
     if [[ $? -ne 0 ]]
     then
         echo "Error detected!"
+        echo "Run"
+        echo "'npx eslint --fix -c $LINT_CONFIG $FILES'"
+        echo "for automatic fix or fix it manually."
         CROSS_CHECK_RESULT=1
     fi
 fi
