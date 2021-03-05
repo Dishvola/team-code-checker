@@ -80,7 +80,7 @@ if [[ "$FILES" != "" ]]; then
     then
         echo "Error detected!"
         echo "Run"
-        echo "'phpcbf $FILES'"
+        echo "'phpcbf --standard=Drupal $FILES'"
         echo "for automatic fix or fix it manually."
         CROSS_CHECK_RESULT=1
     fi
@@ -93,7 +93,7 @@ if [[ "$FILES" != "" ]]; then
     then
         echo "Error detected!"
         echo "Run"
-        echo "'phpcbf $FILES'"
+        echo "'phpcbf --standard=Drupal $FILES'"
         echo "for automatic fix or fix it manually."
         CROSS_CHECK_RESULT=1
     fi
