@@ -1,5 +1,6 @@
 # team-code-checker
-Check your code on via "git pre-commit hook" by running PHP Code Sniffer and ESLint
+Checking your code on the "git pre-commit hook" by running PHP Code Sniffer and ESLint.
+Using for our team to work with Drupal 7/8/9 code standards.
 
 # Istructions
 
