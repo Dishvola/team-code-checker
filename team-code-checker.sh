@@ -115,23 +115,23 @@ while read FILE; do
     # check that file not removed(also can be implemented using --diff-filter)
     if [[ -f $FILE ]]; then
         if [[ "$FILE" =~ ^.+(js)$ ]]; then
-            FILES="$FILES $PROJECT/$FILE"
+            FILES_JS="$FILES_JS $PROJECT/$FILE"
         fi
 fi
 done << EOT
     $(git diff --cached --name-only)
 EOT
 
-if [[ "$FILES" != "" ]]; then
+if [[ "$FILES_JS" != "" ]]; then
     echo ""
     echo ""
     echo "=== Running ESLint. ==="
-    npx eslint -c $LINT_CONFIG --ignore-path $LINT_IGNORE $FILES
+    npx eslint -c $LINT_CONFIG --ignore-path $LINT_IGNORE $FILES_JS
     if [[ $? -ne 0 ]]
     then
         echo "Error detected!"
         echo "Run"
-        echo "'npx eslint --fix -c $LINT_CONFIG $FILES'"
+        echo "'npx eslint --fix -c $LINT_CONFIG $FILES_JS'"
         echo "for automatic fix or fix it manually."
         CROSS_CHECK_RESULT=1
     fi
