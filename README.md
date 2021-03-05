@@ -17,11 +17,11 @@ Check your code on via "git pre-commit hook" by running PHP Code Sniffer and ESL
 	    - If "pre-commit" file doesn't exist.
 		    - Copy example file `cp pre-commit.sample pre-commit`
 		    - Run `chmod +x pre-commit`
-		    - Replace all example shell code with `"$(dirname "$0")"/team-code-checker/team-code-checker.sh` for import our script.
+		    - Replace all example shell code with `"$(dirname "$0")"/team-code-checker/team-code-checker.sh` (with double quotes) for import our script.
 
 	    - If "pre-commit" file exist.
 		    - Run `chmod +x pre-commit`
-		    - Add string `"$(dirname "$0")"/team-code-checker/team-code-checker.sh` for import our script.
+		    - Add string `"$(dirname "$0")"/team-code-checker/team-code-checker.sh` (with double quotes) for import our script.
 		
 	- Then go to dir "team-code-checker" and run `npm i`.
 
