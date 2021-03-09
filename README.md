@@ -57,3 +57,16 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
 			    `phpcs -i` - Result like - "The installed coding standards are PEAR, Zend, PSR2, MySource, Squiz, PSR1, PSR12, Drupal and DrupalPractice".
 
 4) Now you can do your work much better! Please try add some code with error to the php or js file for example and then create commit.
+
+# Examples for fix old code.
+
+1) JS
+
+    - warning - Unexpected unnamed function - func-names
+
+        - you can replace `function() {` with `() => {` for most cases.
+        - or replace `function(i) {` with `i => {` for most cases.
+
+    - error - Unexpected use of 'history' - no-restricted-globals
+
+        - you can replace `history.foo` with `window.history.foo` for most cases.
