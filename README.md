@@ -7,7 +7,7 @@ https://www.drupal.org/docs/develop/standards/coding-standards
 
 https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-standards
 
-# Istructions
+# Instructions
 
 1) NPM and NPX should be installed (global), then go to project root folder where dir ".git/" exist.
 	- Then go to .git/hooks/ folder.
@@ -64,8 +64,7 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
 
     - warning - Unexpected unnamed function - func-names
 
-        - you can replace `function() {` with `() => {` for most cases.
-        - or replace `function(i) {` with `i => {` for most cases.
+        - you can replace `function() {` with `() => {` OR add func name like `function funcName() {`.
 
     - error - Unexpected use of 'history' - no-restricted-globals
 
