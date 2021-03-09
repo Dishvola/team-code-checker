@@ -2,7 +2,9 @@
 Checking your code on the "git pre-commit hook" by running PHP Code Sniffer and ESLint.
 
 Using by our team for work with Drupal 7/8/9 PHP/JS code standards.
+
 https://www.drupal.org/docs/develop/standards/coding-standards
+
 https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-standards
 
 # Istructions
