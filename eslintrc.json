@@ -1,5 +1,6 @@
 {
   "extends": [
+    "drupal",
     "airbnb",
     "plugin:prettier/recommended"
   ],
@@ -22,6 +23,7 @@
     "CKEDITOR": true
   },
   "rules": {
+    "brace-style": [2, "stroustrup"],
     "prettier/prettier": "error",
     "consistent-return": ["off"],
     "no-underscore-dangle": ["off"],
