@@ -64,7 +64,7 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
 
     - warning - Unexpected unnamed function - func-names
 
-        - you can replace `function() {` with `() => {` OR add func name like `function funcName() {`.
+        - you can add func name like `function funcName() {` (Recommended when `this` used in the function logic) OR replace `function() {` with `() => {` for cases without `this`.
 
     - error - Unexpected use of 'history' - no-restricted-globals
 
