@@ -56,6 +56,8 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
 		    
 			    `phpcs -i` - Result like - "The installed coding standards are PEAR, Zend, PSR2, MySource, Squiz, PSR1, PSR12, Drupal and DrupalPractice".
 
+3) NOTE! You can use option `-n` for skip code checking step. Example `git commit -n -m "Commit message"`. Use it only for deploy vendor libraries, contrib moduels or updated generated features code. __Keep in mind, all your custom code shoud be checked!!!__
+
 4) Now you can do your work much better! Please try add some code with error to the php or js file for example and then create commit.
 
 # Examples for fix old code.
@@ -69,3 +71,23 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
     - error - Unexpected use of 'history' - no-restricted-globals
 
         - you can replace `history.foo` with `window.history.foo` for most cases.
+
+2) PHP
+
+    - for comment code fragment
+
+        - you can use comment format like this one (80 characters per line):
+
+            ```php
+            <?php
+            // Update field_ora_additional_contrib.
+            /*
+            if (isset($lif['field_ora_additional_contrib'][LANGUAGE_NONE][0]
+            ['value']['#value'])) {
+            $lif['field_ora_additional_contrib'][LANGUAGE_NONE][0]
+            ['value']['#value'] = 500;
+            $commands[] = ajax_command_replace
+            (".field-name-field-ora-additional-contrib.form-wrapper",
+            drupal_render($lif['field_ora_additional_contrib']));
+            }*/
+            ```
