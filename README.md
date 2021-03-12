@@ -33,10 +33,10 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
 
 
 2) Global Coder install via Composer. (https://www.drupal.org/node/1419988#coder)
-	You should do it once for your system!
+	__You should do it once for your system!__
 	Coder using for check code in the Drupal 7 and 8/9.
 	Those checks apply to all versions of Drupal, so you can use Coder (for example 8.3.x) to check Drupal 7 code.
-	So you should do only this sections.
+	So you should do only this sections and please double-check __Verify Registered Standards__ step.
 	- Install Coder and PHPCS with Composer
 	    - Global Coder Install
 	    
@@ -52,7 +52,7 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
 		    - Manually Set Installed Paths
                 `phpcs --config-set installed_paths ~/.composer/vendor/drupal/coder/coder_sniffer`
 
-		    - Verify Registered Standards
+		    - __Verify Registered Standards__
 		    
 			    `phpcs -i` - Result like - "The installed coding standards are PEAR, Zend, PSR2, MySource, Squiz, PSR1, PSR12, Drupal and DrupalPractice".
 
