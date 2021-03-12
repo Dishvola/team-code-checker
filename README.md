@@ -91,3 +91,17 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
             drupal_render($lif['field_ora_additional_contrib']));
             }*/
             ```
+
+# How it looks?
+
+1) PHPCS
+
+	- PHP errors and warnings: ![Image 2021-03-05 at 3 36 15 PM](https://user-images.githubusercontent.com/1149440/110924806-26a34a00-832b-11eb-9962-2b73b6912d83.jpg)
+
+	- Generated command for autofix! ![Image 2021-03-11 at 11 29 47 AM](https://user-images.githubusercontent.com/1149440/110924830-2d31c180-832b-11eb-912a-f29950f0142a.jpg)
+
+2) ESLint
+
+	- JS errors and warnings: ![Image 2021-03-12 at 12 10 57 PM](https://user-images.githubusercontent.com/1149440/110925915-71719180-832c-11eb-9681-d35e573768bc.jpg)
+
+	- Generated command for autofix!![Image 2021-03-12 at 12 12 36 PM](https://user-images.githubusercontent.com/1149440/110925907-6f0f3780-832c-11eb-8fda-fd06d4130a58.jpg)
