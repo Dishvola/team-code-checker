@@ -65,7 +65,7 @@ PROJECT=`php -r "echo dirname(dirname(dirname(dirname(realpath('$0')))));"`
 while read FILE; do
     # check that file not removed(also can be implemented using --diff-filter)
     if [[ -f $FILE ]]; then
-        if [[ "$FILE" =~ ^.+(php|module|inc|install|test|profile|theme|css|info|txt|md|yml)$ ]]; then
+        if [[ "$FILE" =~ ^.+(php|module|inc|install|test|profile|theme|info|txt|md|yml)$ ]]; then
             FILES="$FILES $PROJECT/$FILE"
         fi
 fi
@@ -75,7 +75,7 @@ EOT
 
 if [[ "$FILES" != "" ]]; then
     echo "=== Running Code Sniffer. Code standard Drupal. ==="
-    phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml --ignore=node_modules,bower_components,vendor -p $FILES
+    phpcs --standard=Drupal --extensions=php,module,inc,install,test,profile,theme,info,txt,md,yml --ignore=node_modules,bower_components,vendor -p $FILES
     if [[ $? -ne 0 ]]
     then
         echo "Error detected!"
@@ -88,7 +88,7 @@ if [[ "$FILES" != "" ]]; then
     echo ""
     echo ""
     echo "=== Running Code Sniffer. Code standard DrupalPractice. ==="
-    phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md,yml --ignore=node_modules,bower_components,vendor -p $FILES
+    phpcs --standard=DrupalPractice --extensions=php,module,inc,install,test,profile,theme,info,txt,md,yml --ignore=node_modules,bower_components,vendor -p $FILES
     if [[ $? -ne 0 ]]
     then
         echo "Error detected!"
