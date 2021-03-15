@@ -93,39 +93,43 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
             ```
 
 3) Ignore options
-	- Ignore all the sniffs for the file:
 
-            ```php
-            <?php
-            // phpcs:ignoreFile
-            ```
+- Ignore all the sniffs for the file:
 
-	- Ignore only the current and next line:
+	```php
+	<?php
+	// phpcs:ignoreFile
+	```
 
-            ```php
-            // phpcs:ignore
-	    public function store($myArray)
-            ```
+- Ignore only the current and next line:
 
-	- Ignore the current line:
+	```php
+	<?php
+	// phpcs:ignore
+	public function store($myArray)
+	```
 
-            ```php
-            public function store($myArray) // phpcs:ignore
-            ```
+- Ignore the current line:
 
-	- Ignore a certain amount of lines in a file:
+	```php
+	<?php
+	public function store($myArray) // phpcs:ignore
+	```
 
-            ```php
-	    <?php
-            // phpcs:disable
-	    public function store($myArray): void {
-	      if (count($myArray) > 3) {
-	        // Humongous amount of legacy code you do not want to look at
-	      }
-	      return;
-	    }
-	    // phpcs:enable
-            ```
+- Ignore a certain amount of lines in a file:
+
+	```php
+	<?php
+	// phpcs:disable
+	public function store($myArray): void {
+	  if (count($myArray) > 3) {
+	    // Humongous amount of legacy code you don't want to look at
+	  }
+	  
+	  return;
+	}
+	// phpcs:enable
+	```
 
 # How it looks?
 
