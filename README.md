@@ -92,6 +92,41 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
             }*/
             ```
 
+3) Ignore options
+	- Ignore all the sniffs for the file:
+
+            ```php
+            <?php
+            // phpcs:ignoreFile
+            ```
+
+	- Ignore only the current and next line:
+
+            ```php
+            // phpcs:ignore
+	    public function store($myArray)
+            ```
+
+	- Ignore the current line:
+
+            ```php
+            public function store($myArray) // phpcs:ignore
+            ```
+
+	- Ignore a certain amount of lines in a file:
+
+            ```php
+	    <?php
+            // phpcs:disable
+	    public function store($myArray): void {
+	      if (count($myArray) > 3) {
+	        // Humongous amount of legacy code you do not want to look at
+	      }
+	      return;
+	    }
+	    // phpcs:enable
+            ```
+
 # How it looks?
 
 1) PHPCS
