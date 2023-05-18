@@ -27,7 +27,7 @@ https://www.drupal.org/docs/develop/standards/javascript/javascript-coding-stand
 
 	    - If "pre-commit" file exist.
 		    - Run `chmod +x pre-commit`
-		    - Add string `"$(dirname "$0")"/team-code-checker/team-code-checker.sh` (with double quotes) for import our script.
+		    - Add string `"$(dirname "$0")"/team-code-checker/team-code-checker.sh` (with double quotes) for import our script __at the end of the file!!!__ So our import should be latest.
 		
 	- Then go to dir "team-code-checker" and run `npm i`.
 
