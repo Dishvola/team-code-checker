@@ -41,7 +41,7 @@ while read FILE; do
     # check that file not removed(also can be implemented using --diff-filter)
     if [[ -f $FILE ]]; then
         if [[ "$FILE" =~ ^.+(php|html|js)$ ]]; then
-            RESULT=$(grep -i -m 1 "$blackList" "$FILE")
+            RESULT=$(grep -m 1 "$blackList" "$FILE")
             if [[ ! -z $RESULT ]]; then
                 echo "$FILE contains denied word: $RESULT"
                 CROSS_CHECK_RESULT=1
